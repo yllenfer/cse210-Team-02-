@@ -13,19 +13,26 @@ class Puzzle:
 
     def select_word(self):
         """
-        Gets a word from the list self.words
+        selects a word from the list self.words by using the random module.
 
-        args = self 
         """
         self.word =  random.choice(self.words)
 
 
     def draw_word(self):
+        """
+        Will draw a word by using a for loop to print out each of the characters of the chosen word.
+        """
         for letter in self.word_guess:
              self.console.write_single_line(letter)        
         self.console.write("")
 
     def process_guess(self, guess_letter):
+        """
+        Will determine if the players letter guess is in the word by iterating through the list of characters and seeing if the letter mathes any of the characters in the list.
+
+        Parameter: 'guess_letter'(string):  the letter the user passes into the function
+        """
         correct_guess = False
         
         for index, char in enumerate(self.word):
@@ -36,4 +43,9 @@ class Puzzle:
         return correct_guess
 
     def keep_playing(self):
+        """
+        determine whether the game should continue or not
+
+        return: word guessed
+        """
         return ("_" in self.word_guess)
