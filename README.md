@@ -1,10 +1,12 @@
-# cse210-Team02
-Team repository for CSE 210. 
+<h1>cse210-Team02</h1>
 
-Team members 
+<h3>Team repository for CSE 210 💻</h3>
 
-Adam Lynn
-Ekhasomi Sunday
-Yllen Fernandez
-Michael Cochran
-Elisabeth Billman
+<h4>Team members:</h4>
+
+<ul>
+  <li>Adam Lynn</li>
+  <li>Ekhasomi Sunday</li>
+  <li>Yllen Fernandez</li>
+  <li>Elisabeth Billman</li>
+</ul>
