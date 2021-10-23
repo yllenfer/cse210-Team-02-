@@ -34,4 +34,7 @@ root                    (project root folder)
 
 ## Authors
 ---
-* # TODO: Add your names and emails here
+* # Yllen Fernandez
+* # Ekhasomi Sunday
+* # Elisabeth Billman
+* # Adam Lynn
