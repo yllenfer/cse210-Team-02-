@@ -4,7 +4,8 @@ from game.point import Point
 
 
 class Score(Actor):
-    """Points earned. The responsibility of Score is to keep track of the player's points.
+    """Points earned. The responsibility of Score is to keep track of the player's points. Score class inherits from
+    Actor class
 
     Stereotype:
         Information Holder
@@ -14,10 +15,11 @@ class Score(Actor):
     """
 
     def __init__(self):
-        """The class constructor. Invokes the superclass constructor, initializes points to zero, sets the position and updates the text.
+        """The class constructor. Invokes the superclass constructor, initializes points to zero, sets the position
+        and updates the text.
 
         Args:
-            self (Score): an instance of Score.
+            self (Score): an instance of Actor.
         """
         super().__init__()
         self._points = 0

@@ -84,6 +84,12 @@ class Director:
         self._output_service.flush_buffer()
 
     def check_buffer(self):
+        """Checks if there word in the buffer is the same that's being displayed in order to add points according to
+        the length of the word and takes away the word that's been typed in correctly
+
+              Args:
+                  self (Director): An instance of Director.
+              """
         buffer = self._buffer.get_buffer()
         for word in self._words:
             if word.get_word() in buffer:
