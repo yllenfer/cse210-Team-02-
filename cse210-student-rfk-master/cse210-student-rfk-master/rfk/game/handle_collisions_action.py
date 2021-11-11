@@ -56,20 +56,20 @@ class HandleCollisionsAction(Action):
         paddle = cast["paddle"][0]
         velocity = ball.get_velocity()
 
-    paddle_x_position = paddle.get_position().get_x()
-    paddle_y_position = paddle.get_position().get_y()
-    ball_x_position = ball.get_position().get_x()
-    ball_y_position = ball.get_position().get_y()
+        paddle_x_position = paddle.get_position().get_x()
+        paddle_y_position = paddle.get_position().get_y()
+        ball_x_position = ball.get_position().get_x()
+        ball_y_position = ball.get_position().get_y()
 
-    if (ball_y_position == paddle_y_position and
-            paddle_x_position <= ball_x_position <= paddle_x_position + len(paddle.get_text())):
-        ball_x_velocity = velocity.get_x()
-        ball_y_velocity = velocity.get_y()
-        ball.set_velocity(Point(ball_x_velocity, (ball_y_velocity * -1)))
+        if (ball_y_position == paddle_y_position and
+                paddle_x_position <= ball_x_position <= paddle_x_position + len(paddle.get_text())):
+            ball_x_velocity = velocity.get_x()
+            ball_y_velocity = velocity.get_y()
+            ball.set_velocity(Point(ball_x_velocity, (ball_y_velocity * -1)))
 
     def ball_wall_collision(self, cast):
         """Defines what happens when the ball touches the bricks
-
+​
         Args:
             cast (dict): The game actors {key: tag, value: list}.
 
@@ -85,20 +85,20 @@ class HandleCollisionsAction(Action):
 
     def ball_ceiling_collision(self, cast):
         """Defines what happens when the ball touches the ceiling.
-
+​
         Args:
             cast (dict): The game actors {key: tag, value: list}.
 
         """
 
-    ball = cast["ball"][0]
-    velocity = ball.get_velocity()
-    position = ball.get_position()
-    ball_x_velocity = velocity.get_x()
-    ball_y_velocity = velocity.get_y()
-    y2 = position.get_y()
-    if y2 == 1:
-        ball.set_velocity(Point(ball_x_velocity, (ball_y_velocity * -1)))
+        ball = cast["ball"][0]
+        velocity = ball.get_velocity()
+        position = ball.get_position()
+        ball_x_velocity = velocity.get_x()
+        ball_y_velocity = velocity.get_y()
+        y2 = position.get_y()
+        if y2 == 1:
+            ball.set_velocity(Point(ball_x_velocity, (ball_y_velocity * -1)))
 
     def ball_floor_collision(self, cast):
         """Ends the game when the ball touches the floor.

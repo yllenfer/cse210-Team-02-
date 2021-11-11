@@ -15,7 +15,6 @@ from asciimatics.screen import Screen
 def main(screen):
     # create the cast {key: tag, value: list}
     cast = {}
-
     x = int(constants.MAX_X / 2)
     y = int(constants.MAX_Y - 2)
     position = Point(x, y)
@@ -23,7 +22,6 @@ def main(screen):
     paddle.set_text("==============")
     paddle.set_position(position)
     cast["paddle"] = [paddle]
-
     cast["brick"] = []
     for x in range(5, 75):
         for y in range(2, 6):
@@ -32,7 +30,6 @@ def main(screen):
             brick.set_text("*")
             brick.set_position(position)
             cast["brick"].append(brick)
-
     x = int(constants.MAX_X / 2)
     y = int(constants.MAX_Y / 2)
     position = Point(x, y)
@@ -61,4 +58,5 @@ def main(screen):
     director = Director(cast, script)
     director.start_game()
 
-    Screen.wrapper(main)
+
+Screen.wrapper(main)
